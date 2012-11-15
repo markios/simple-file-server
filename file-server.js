@@ -23,7 +23,6 @@
                     res.setHeader('AccessControl', 'AllowOrigin');
                     res.setHeader('Content-Length', body.length);
                 }
-
                 res.end(body, 'utf-8');
           });
 
