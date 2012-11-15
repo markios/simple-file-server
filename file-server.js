@@ -11,7 +11,6 @@
 
         app.get('*', function(req, res){
           
-
           fs.readFile('files/' + req.params[0].replace('/', ''), function(error, content){
                 var body = '';
 
@@ -22,7 +21,7 @@
                     body = content;
                     res.setHeader('Content-Type', 'application/json');
                     res.setHeader('AccessControl', 'AllowOrigin');
-                    res.setHeader('Content-Length', body.length);   
+                    res.setHeader('Content-Length', body.length);
                 }
 
                 res.end(body, 'utf-8');
