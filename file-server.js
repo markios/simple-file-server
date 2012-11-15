@@ -20,7 +20,7 @@
                 } else {
                     body = content;
                     res.setHeader('Content-Type', 'application/json');
-                    res.setHeader('AccessControl', 'AllowOrigin');
+                    res.setHeader('Access-Control-Allow-Origin', '*');
                     res.setHeader('Content-Length', body.length);
                 }
                 res.end(body, 'utf-8');
